@@ -6,7 +6,7 @@ $.fn.pressEnter = function () {
 
 describe("Search Location", function() {
     beforeEach(function() {
-        jasmine.getFixtures().fixturesPath = 'spec/fixtures';
+        jasmine.getFixtures().fixturesPath = 'base/spec/fixtures';
         loadFixtures('index.html');
     });
 
@@ -20,14 +20,14 @@ describe("Search Location", function() {
             $('#search').click();
 
             expect($.ajax).toHaveBeenCalled();
-            expect($.ajax.mostRecentCall.args[0].url).toContain('Melbourne');
+            expect($.ajax.calls.mostRecent().args[0].url).toContain('Melbourne');
         });
     });
 
     describe("based on search results", function() {
 
         beforeEach(function() {
-            spyOn($, 'ajax').andCallFake(function(opt) {
+            spyOn($, 'ajax').and.callFake(function(opt) {
                 opt.success([
                     {name: "Melbourne"},
                     {name: "London"}
@@ -55,7 +55,7 @@ describe("Search Location", function() {
 
     describe('remove from liked', function() {
        beforeEach(function(){
-          spyOn($, 'ajax').andCallFake(function(opt) {
+          spyOn($, 'ajax').and.callFake(function(opt) {
               opt.success([
                   {name: "Melbourne"},
                   {name: "London"}
