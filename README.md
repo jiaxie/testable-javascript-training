@@ -5,13 +5,14 @@
 First checkout the code:
 
 ```sh
-git clone git@github.com:abruzzi/tw-testable-javascript.git
+git clone git@github.com:jiaxie/testable-javascript-training.git
 ```
 
 and initialize the environment:
 
 ```sh
 cd tw-testable-javascript
+npm install
 bower install
 ```
 
@@ -24,19 +25,15 @@ curl http://locations-backend.herokuapp.com/locations
 Note that you can perform a serach by city name, like:
 
 ```sh
-curl http://locations-backend.herokuapp.com/locations/Melbourne
+curl http://locations-backend.herokuapp.com/locations?location=Melbourne
 ```
 
 will return all locations that are contain `Melbourne`.
 
-#### Launch the app
+#### Run Tests
 
-Once you have done the previous steps, you can run the server by:
-
+If you want to run tests, you can run by karma:
 ```sh
-./server.sh
+karma start
 ```
-
-If everything goes well, you can see some location information in the console of the brower if you
-open `http://localhost:9999/`.
 
