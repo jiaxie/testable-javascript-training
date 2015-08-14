@@ -16,6 +16,7 @@ module.exports = function(config) {
       'scripts/vendor/jquery/dist/jquery.js',
       'scripts/vendor/jasmine-jquery/lib/jasmine-jquery.js',
       'scripts/vendor/underscore/underscore.js',
+      'scripts/vendor/handlebars/handlebars.js',
       'scripts/*.js',
       'spec/*spec.js',
       {pattern: "spec/fixtures/*.html"}
@@ -50,7 +51,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

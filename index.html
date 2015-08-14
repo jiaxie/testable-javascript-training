@@ -1,26 +1,42 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Locations</title> 
+        <title>Locations</title>
+
+        <script id="searchResultsTemplate" type="text/x-handlebars-template">
+            <h4>Search Results</h4>
+            <ul>
+                {{#locations}}
+                <li><span class="location">{{name}}</span><button data-location="{{name}}">{{status}}</button></li>
+                {{/locations}}
+            </ul>
+        </script>
+
+        <script id="LikedTemplate" type="text/x-handlebars-template">
+            <h4>Locations I liked</h4>
+            <ul>
+                {{#locations}}
+                <li>{{name}}</li>
+                {{/locations}}
+            </ul>
+        </script>
     </head>
     <body>
         <div id="container">
             <input type="text" name="location" id="location" value="" placeholder="e.g.Melbourne" />
             <input type="button" name="search" id="search" value="Search" />
 
-            <div id="searchResults">
-                <h4>Search Results</h4>
-                <ul />
-            </div>
+            <div id="searchResults"></div>
 
-            <div id="liked">
-                <h4>Locations I liked</h4>
-                <ul />
-            </div>
+            <div id="liked"></div>
         </div>
         <script src="scripts/vendor/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/vendor/underscore/underscore.js" type="text/javascript" charset="utf-8"></script>
-        <script src="scripts/search-location.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/vendor/handlebars/handlebars.js" type="text/javascript" charset="utf-8"></script>
+        <!--<script src="scripts/search-location.js" type="text/javascript" charset="utf-8"></script>-->
+        <script src="scripts/search-component.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/search-result-component.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/liked-component.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/app.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>

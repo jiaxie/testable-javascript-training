@@ -1,4 +1,6 @@
 $(function() {
-    var searchLocation = new SearchLocation();
-    searchLocation.launch();
+    new SearchComponent('#location', '#search');
+    new SearchResultComponent('#searchResults');
+    new LikedComponent('#liked');
 });
+
