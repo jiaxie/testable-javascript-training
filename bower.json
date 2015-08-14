@@ -2,14 +2,14 @@
   "name": "testable-javascript",
   "version": "0.0.0",
   "authors": [
-    "Qiu Juntao <juntao.qiu@gmail.com>"
+    "Xie Jia<xiejialight@gmail.com>"
   ],
   "description": "Testable JavaScript",
   "keywords": [
     "Testable"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/abruzzi/tw-testable-javascript",
+  "homepage": "https://github.com/jiaxie/testable-javascript-training/",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.4",
