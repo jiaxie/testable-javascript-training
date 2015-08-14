@@ -16,6 +16,7 @@ describe('search Component', function(){
 				var spyEvent = spyOnEvent($(document), 'search');
 				spyOn($, 'ajax').and.callFake(function(params) {
 						params.success([{name: 'a'}, {name: 'b'}]);
+						params.error('something went wrong');
 				});
 				var searchComponent = new SearchComponent('#location', '#search');
 
