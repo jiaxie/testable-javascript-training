@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node ./node_modules/httpserver/httpserver.js -p 9090
+java -jar moco-runner-0.10.1-standalone.jar http -p 8080 -c server.json

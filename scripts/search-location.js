@@ -8,6 +8,7 @@ function SearchLocation() {
         $('#search').on('click', function(e) {
             $.ajax({
                 url: 'http://locations-backend.herokuapp.com/locations?location=' + location.val(),
+                //url: '/locations?location=' + location.val(),
                 dataType: 'json',
                 success: function(data) {
                     searchResults.html('');
@@ -25,12 +26,12 @@ function SearchLocation() {
                            });
 
                             if(button.text() == 'Like') {
-                                if(!isExsit) liked.append(li)
+                                if(!isExsit) liked.append(li);
                                 button.text('UnLike')
                             }else{
                                 _.each(liked.find('li'), function(liked_item){
-                                    if($(liked_item).text() == selected_item) $(liked_item).remove();
-                                })
+                                  if($(liked_item).text() == selected_item) $(liked_item).remove();
+                                });
                                 button.text('Like');
                             };
                         });
