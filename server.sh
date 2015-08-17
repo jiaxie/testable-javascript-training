@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python -m SimpleHTTPServer 9999
+node ./node_modules/httpserver/httpserver.js -p 9090

@@ -6,7 +6,7 @@ $.fn.pressEnter = function () {
 
 describe("Search Location", function() {
     beforeEach(function() {
-        jasmine.getFixtures().fixturesPath = 'base/spec/fixtures';
+        jasmine.getFixtures().fixturesPath = 'spec/fixtures';
         loadFixtures('index.html');
     });
 
