@@ -1,9 +1,12 @@
 describe('Search Result Component', function(){
 		var searchResultComponent = null;
 		var fakeResults = null;
+
 		beforeEach(function(){
+				//jasmine.getFixtures.fixturesPath = 'spec/fixtures';
 				jasmine.getFixtures.fixturesPath = 'base/spec/fixtures';
 				loadFixtures('index.html');
+
 				searchResultComponent = new SearchResultComponent('#searchResults');
 				fakeResults = [{name: 'test 1'}, {name: 'test 2'}];
 				$(document).trigger('search', [fakeResults]);

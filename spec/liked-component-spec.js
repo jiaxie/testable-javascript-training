@@ -2,6 +2,7 @@ describe('Liked Component', function(){
 		var likedComponent = null;
 
 		beforeEach(function(){
+				//jasmine.getFixtures().fixturesPath = 'spec/fixtures';
 				jasmine.getFixtures().fixturesPath = 'base/spec/fixtures';
 				loadFixtures('index.html');
 				likedComponent = new LikedComponent('#liked');

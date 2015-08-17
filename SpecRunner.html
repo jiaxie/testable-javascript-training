@@ -9,47 +9,25 @@
 
   <script type="text/javascript" src="scripts/vendor/jquery/dist/jquery.js"></script>
   <script src="scripts/vendor/underscore/underscore.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/vendor/handlebars/handlebars.js" type="text/javascript" charset="utf-8"></script>
+
   <script type="text/javascript" src="scripts/vendor/jasmine/lib/jasmine-core/jasmine.js"></script>
   <script type="text/javascript" src="scripts/vendor/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+  <script type="text/javascript" src="scripts/vendor/jasmine/lib/jasmine-core/boot.js"></script>
   <script type="text/javascript" src="scripts/vendor/jasmine-jquery/lib/jasmine-jquery.js"></script>
 
 
+
   <!-- include source files here... -->
-  <script type="text/javascript" src="scripts/search-location.js"></script>
+  <script type="text/javascript" src="scripts/liked-component.js"></script>
+  <script type="text/javascript" src="scripts/search-component.js"></script>
+  <script type="text/javascript" src="scripts/search-result-component.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
 
   <!-- include spec files here... -->
-  <script type="text/javascript" src="spec/search-location-spec.js"></script>
-
-  <script type="text/javascript">
-    (function() {
-      var jasmineEnv = jasmine.getEnv();
-      jasmineEnv.updateInterval = 1000;
-
-      var htmlReporter = new jasmine.HtmlReporter();
-
-      jasmineEnv.addReporter(htmlReporter);
-
-      jasmineEnv.specFilter = function(spec) {
-        return htmlReporter.specFilter(spec);
-      };
-
-      var currentWindowOnload = window.onload;
-
-      window.onload = function() {
-        if (currentWindowOnload) {
-          currentWindowOnload();
-        }
-        execJasmine();
-      };
-
-      function execJasmine() {
-        jasmineEnv.execute();
-      }
-
-    })();
-  </script>
-
+  <script type="text/javascript" src="spec/search-component-spec.js"></script>
+  <script type="text/javascript" src="spec/liked-component-spec.js"></script>
+  <script type="text/javascript" src="spec/search-result-component-spec.js"></script>
 </head>
 
 <body>
