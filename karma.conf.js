@@ -13,11 +13,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'scripts/vendor/jquery/jquery.js',
+      'scripts/vendor/jquery/dist/jquery.js',
       'scripts/vendor/jasmine-jquery/lib/jasmine-jquery.js',
       'scripts/vendor/underscore/underscore.js',
       'scripts/*.js',
-      'spec/*spec.js'
+      'spec/*spec.js',
+      {pattern: "spec/fixtures/*.html"}
     ],
 
     // list of files to exclude
@@ -49,7 +50,8 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+
+    browsers: ['PhantomJS'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
